@@ -29,7 +29,26 @@ ul {
   list-style: none;
 }
 
+header {
+  text-align: center;
+  padding: 1rem;
+}
+
 img {
   max-width: 100%;
   height: auto;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box {
+  height: 3rem;
+  width: 3rem;
+  border: 1px solid black;
+  text-align: center;
+  padding: 1rem 0
 }
