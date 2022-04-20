@@ -1,0 +1,89 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  text-align: center;
+}
+
+h1 {
+  padding: 1rem 0;
+}
+
+.container {
+  height: 27rem;
+  width: 45rem;
+  /* border: 1px solid black; */
+  margin: 0 auto;
+  padding: 1rem 2.5rem;
+  position: relative;
+}
+
+.radius {
+  border-radius: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.result-screen {
+  background-color: black;
+  color: #ffffff;
+  width: 40rem;
+  height: 5rem;
+  font-size: 3.5rem;
+  text-align: right;
+  padding: 0 5px;
+  /* position: relative; */
+}
+
+.buttons-area {
+  width: 40rem;
+}
+
+.operations {
+  justify-content: space-between;
+}
+
+.button {
+  width: 7rem;
+  height: 2rem;
+  background-color: rgb(127, 60, 60);
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.digits {
+  width: 25rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.digits .button {
+  background-color: rgb(81, 81, 219);
+}
+
+.equals {
+  position: absolute;
+  right: 3rem;
+  top: 10rem;
+  height: 15rem;
+  background-color: rgb(127, 60, 60);
+  width: 10rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
