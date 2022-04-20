@@ -19,5 +19,5 @@ function clear() {
 }
 
 document.querySelector(`.equals`).addEventListener(`click`, function () {
-
+  resultScreen.innerText = eval(resultScreen.innerText)
 })
