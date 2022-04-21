@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper and Scissors</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <main class="container">
+    <section class="header">
+      <h1>Rock &nbsp; Paper &nbsp; Scissor</h1>
+    </section>
+    <section class="game-area">
+      <div class="human-area">
+        <h3>YOU-
+          <span class="human-score">0</span>&nbsp;
+          <span class="human-selected-item-name"></span>
+        </h3>
+        <div class="human-items icons flex">
+          <div class="col-30"><i class="fa fa-hand-rock-o" aria-hidden="true" data-name="Rock"></i></div>
+          <div class="col-30"><i class="fa fa-hand-paper-o" aria-hidden="true" data-name="Paper"></i></div>
+          <div class="col-30"><i class="fa fa-hand-scissors-o" aria-hidden="true" data-name="Scissor"></i></div>
+        </div>
+      </div>
+
+      <div class="computer-area">
+        <h3>Computer-
+          <span class="computer-score">0</span>&nbsp;
+          <span class="computer-selected-item-name"></span>
+        </h3>
+        <div class="computer-items icons flex">
+          <div class="col-30"><i class="fa fa-hand-rock-o" aria-hidden="true" data-name="Rock"></i></div>
+          <div class="col-30"><i class="fa fa-hand-paper-o" aria-hidden="true" data-name="Paper"></i></div>
+          <div class="col-30"><i class="fa fa-hand-scissors-o" aria-hidden="true" data-name="Scissor"></i></div>
+        </div>
+      </div>
+
+      <div class="refresh">
+        <i class="fa fa-refresh" aria-hidden="true"></i>
+      </div>
+      <div class="result">
+        <h1></h1>
+      </div>
+    </section>
+
+  </main>
+  <script src="./script.js"></script>
+</body>
+
+</html>

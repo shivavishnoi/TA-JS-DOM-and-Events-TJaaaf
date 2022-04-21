@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&family=Square+Peg&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Roboto Condensed',
+    sans-serif;
+  word-spacing: 1.5;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-30 {
+  flex: 0 1 30%;
+  text-align: center;
+}
+
+
+.container {
+  margin: 3rem auto;
+  height: 35rem;
+  width: 45rem;
+  border: 1px solid none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 10px rgba(135, 125, 125, 0.1);
+}
+
+.header {
+  color: #ffffff;
+  background-color: rgb(28, 91, 70);
+  text-align: center;
+  padding: 0.3rem 0;
+}
+
+.game-area {
+  padding: 2rem 4.5rem;
+}
+
+.human-selected-item-name {
+  color: rgb(6, 55, 98);
+}
+
+.human-items i {
+  /* color: rgb(6, 55, 98); */
+  cursor: pointer;
+}
+
+.computer-selected-item-name {
+  color: rgb(106, 15, 15);
+}
+
+.computer-items i {
+  /* color: rgb(106, 15, 15); */
+}
+
+.icons {
+  margin: 3rem 0;
+}
+
+.icons i {
+  font-size: 3rem;
+}
+
+.refresh i {
+  cursor: pointer;
+}
+
+.result {
+  text-align: center;
+}
