@@ -30,5 +30,19 @@ input:focus {
 }
 
 button {
-  display: none;
+  border: none;
+  height: 0px;
+  width: 0px;
+  background-color: aqua;
+}
+
+.moviebox {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px;
+  border-top: 1px dashed green;
+}
+
+.close {
+  cursor: pointer;
 }
