@@ -17,12 +17,13 @@ html {
   margin: 100px auto;
 }
 
-input {
+.movieInput {
   width: 100%;
   border: 2px solid rgb(74, 37, 109);
   border-radius: 5px;
   height: 30px;
   padding: 5px 10px;
+  margin-bottom: 10px;
 }
 
 input:focus {
@@ -36,7 +37,7 @@ button {
   background-color: aqua;
 }
 
-.moviebox {
+.movieBox {
   display: flex;
   justify-content: space-between;
   padding: 10px 5px;
@@ -45,4 +46,8 @@ button {
 
 .close {
   cursor: pointer;
+}
+
+.none {
+  display: none;
 }
