@@ -16,15 +16,22 @@ function addMovie(name) {
   let html = `<div class="moviename">${name}</div>
               <div class="close">Close</div>`
   let movieBoxElm = document.createElement(`div`)
+  let close = document.querySelector(`.close`)
+  close.addEventListener(`click`, (e) => {
+    close.parentElement.remove()
+  })
   movieBoxElm.classList.add(`moviebox`)
   movieBoxElm.innerHTML = html
   document.querySelector(`.movielist`).append(movieBoxElm)
 }
 
-// let close = document.querySelector(`.close`)
-// close.addEventListener(`click`, (e) => {
-//   close.parentElement.remove()
-// })
+// function closeElm() {
+//   let close = document.querySelector(`.close`)
+//   close.addEventListener(`click`, (e) => {
+//     close.parentElement.remove()
+//   })
+
+// }
 
 
 
