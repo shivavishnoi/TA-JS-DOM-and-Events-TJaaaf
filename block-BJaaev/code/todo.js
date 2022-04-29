@@ -1,6 +1,14 @@
 let input = document.querySelector(`#todobox`)
 let rootElm = document.querySelector(`ul`)
 
+
+let all = document.querySelector(`.all`)
+let active = document.querySelector(`.active`)
+let completed = document.querySelector(`.completed`)
+let clear = document.querySelector(`.clear`)
+
+let activeButton = `all`
+
 let allTodos = JSON.parse(localStorage.getItem(`todos`)) || []
 
 
@@ -32,7 +40,7 @@ function handleCheck(e) {
   createUI(allTodos, rootElm)
 }
 
-function createUI(data, root) {
+function createUI(data = allTodos, root) {
   root.innerHTML = ``
   data.forEach((singleTodo, index) => {
     let li = document.createElement(`li`)
@@ -58,4 +66,49 @@ function createUI(data, root) {
 
 createUI(allTodos, rootElm)
 
+all.classList.add(`selected`)
+
+clear.addEventListener(`click`, (e) => {
+  allTodos = allTodos.filter((todo) => !todo.isCompleted)
+  localStorage.setItem("todos", JSON.stringify(allTodos))
+  createUI(allTodos, rootElm)
+})
+
+active.addEventListener(`click`, (e) => {
+  let notCompleted = allTodos.filter((todo) => !todo.isCompleted)
+  createUI(notCompleted, rootElm)
+  activeButton = `active`
+  updateActiveButton(`active`)
+
+})
+
+completed.addEventListener(`click`, (e) => {
+  let completedTodos = allTodos.filter((todo) => todo.isCompleted)
+  createUI(completedTodos, rootElm)
+  activeButton = `completed`
+  updateActiveButton(`completed`)
+
+})
+
+all.addEventListener(`click`, (e) => {
+  createUI(allTodos, rootElm)
+  activeButton = `all`
+  updateActiveButton(`all`)
+})
+
+function updateActiveButton(btn = activeButton) {
+  all.classList.remove(`selected`)
+  active.classList.remove(`selected`)
+  completed.classList.remove(`selected`)
+  if (btn == `all`) {
+    all.classList.add(`selected`)
+  }
+  if (btn == `active`) {
+    active.classList.add(`selected`)
+  }
+  if (btn == `completed`) {
+    completed.classList.add(`selected`)
+  }
+}
+updateActiveButton()
 input.addEventListener(`keyup`, handleSubmit)
