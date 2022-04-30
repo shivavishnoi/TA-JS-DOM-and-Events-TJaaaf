@@ -8,28 +8,39 @@ got.houses.forEach((house) => {
   })
 })
 
-// input search
-let filteredPeople = [];
-let input = document.querySelector(`input`)
-
-function handleKeys(e) {
-  allPeoples.forEach((person) => {
-    if (person.name.toLowerCase().includes(e.target.value)) {
-      filteredPeople.push(person)
-    }
-  })
-
-}
-input.addEventListener(`keyup`, handleKeys)
 
 // button events
-got.houses.forEach((house) => {
-  let button = document.createElement(`button`)
-  button.innerText = house.name
-  button.setAttribute(`data-id`, house.name)
-  // button.addEventListener(`click`, handleButton)
-  buttonRoot.append(button)
-})
+let allTags = got.houses.map((house) => house.name)
+let activeHouse = ``
+function createTagsUI(tags = []) {
+  buttonRoot.innerHTML = ``
+  tags.forEach((tag) => {
+    let button = document.createElement(`button`)
+    button.innerText = tag
+    if (activeHouse == tag) {
+      button.classList.add(`active`)
+    }
+    button.addEventListener(`click`, () => {
+      activeHouse = tag
+      let peopleOfTheHouse = got.houses.find((house) => house.name == tag).people || []
+      console.log(peopleOfTheHouse)
+      createUI(peopleOfTheHouse)
+      createTagsUI(allTags)
+    })
+    buttonRoot.append(button)
+  })
+}
+createTagsUI(allTags)
+
+let input = document.querySelector(`input`)
+
+function handleText(e) {
+  let searchText = e.target.value
+  let filteredPeople = allPeoples.filter((person) => person.name.toLowerCase().includes(searchText.toLowerCase()))
+  createUI(filteredPeople)
+}
+
+input.addEventListener(`input`, handleText)
 
 
 
