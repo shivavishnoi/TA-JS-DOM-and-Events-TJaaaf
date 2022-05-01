@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+.container {
+  width: 350px;
+  padding: 1rem;
+  border: 1px solid rgb(74, 37, 109);
+  text-align: center;
+  background-color: aqua;
+  margin: 100px auto;
+}
+
+.movieInput {
+  width: 100%;
+  border: 2px solid rgb(74, 37, 109);
+  border-radius: 5px;
+  height: 30px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  height: 0px;
+  width: 0px;
+  background-color: aqua;
+}
+
+.movieBox {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px;
+  border-top: 1px dashed green;
+}
+
+.close {
+  cursor: pointer;
+}
+
+.none {
+  display: none;
+}
