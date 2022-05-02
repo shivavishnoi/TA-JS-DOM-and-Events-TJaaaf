@@ -1,0 +1,60 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: blueviolet;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+  max-width: 350px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border: 3px solid greenyellow;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgb(183, 202, 196);
+}
+
+.searchinput {
+  width: 100%;
+  height: 25px;
+  padding: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+span {
+  cursor: pointer;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.selected {
+  background-color: cadetblue;
+}
